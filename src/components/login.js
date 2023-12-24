@@ -11,13 +11,14 @@ const LoginComponent = () => {
         <form action="" method="post">
             <div class="input-field">
                 <label for="stdId">Student Number</label>
-                <input type="text" id="stdId" name="stdId" placeholder="Student Number">
+                <input type="text" id="stdId" name="stdId" placeholder="Student Number" required>
                 <p id="stdNumberMsg"></p>
             </div>
             <div class="input-field">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Password">
+                <input type="password" id="password" name="password" placeholder="Password" required>
                 <p id="passMsg"></p>
+                <p id="loginInvalidFeedback"></p>
             </div>
             <button type="submit" class="loginBtn">Login</button>
         </form>
