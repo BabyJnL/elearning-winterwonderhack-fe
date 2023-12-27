@@ -6,45 +6,48 @@ import { db } from '@/lib/db'
 import { notFound } from 'next/navigation'
 
 interface PageProps {
-  params: {
-    slug: string
-  }
+	params: {
+		slug: string
+	}
 }
 
 const page = async ({ params }: PageProps) => {
-  const { slug } = params
+	const { slug } = params
 
-  const session = await getAuthSession()
+	const session = await getAuthSession()
 
-  const subreddit = await db.subreddit.findFirst({
-    where: { name: slug },
-    include: {
-      posts: {
-        include: {
-          author: true,
-          votes: true,
-          comments: true,
-          subreddit: true,
-        },
-        orderBy: {
-          createdAt: 'desc'
-        },
-        take: INFINITE_SCROLL_PAGINATION_RESULTS,
-      },
-    },
-  })
+	const community = await db.community.findFirst({
+		where: { name: slug },
+		include: {
+			posts: {
+				include: {
+					author: true,
+					votes: true,
+					comments: true,
+					community: true,
+				},
+				orderBy: {
+					createdAt: 'desc',
+				},
+				take: INFINITE_SCROLL_PAGINATION_RESULTS,
+			},
+		},
+	})
 
-  if (!subreddit) return notFound()
+	if (!community) return notFound()
 
-  return (
-    <>
-      <h1 className='font-bold text-3xl md:text-4xl h-14'>
-        r/{subreddit.name}
-      </h1>
-      <MiniCreatePost session={session} />
-      <PostFeed initialPosts={subreddit.posts} subredditName={subreddit.name} />
-    </>
-  )
+	return (
+		<>
+			<h1 className='text-3xl font-bold leading-tight tracking-tighter md:text-4xl'>
+				r/{community.name}
+			</h1>
+			<MiniCreatePost session={session} />
+			<PostFeed
+				initialPosts={community.posts}
+				communityName={community.name}
+			/>
+		</>
+	)
 }
 
 export default page
