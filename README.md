@@ -1,5 +1,5 @@
 
-![Logo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png)
+![Logo](./public/asset/logo.png)
 
 
 # Forum E-learning platform
@@ -8,9 +8,9 @@
 
 ## Screenshots
 
-![App Screenshot](https://raw.githubusercontent.com/BabyJnL/elearning-winterwonderhack-fe/master/home.png?token=GHSAT0AAAAAACMBQK22AO2JUK4TPWYIGP3IZMM3MVA)
+![App Screenshot](./public/asset/home.png)
 
-![App Screenshot](https://raw.githubusercontent.com/BabyJnL/elearning-winterwonderhack-fe/master/post.png?token=GHSAT0AAAAAACMBQK2275O5QTFKRRT73JZGZMM3NJA)
+![App Screenshot](./public/asset/post.png)
 
 
 ## Tech Stack
