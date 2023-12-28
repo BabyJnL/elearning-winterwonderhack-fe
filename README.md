@@ -1,10 +1,6 @@
-
-![Logo](./public/asset/logo.png)
-
-
 # Forum E-learning platform
 
-
+![Logo](./public/asset/logo.png)
 
 ## Screenshots
 
