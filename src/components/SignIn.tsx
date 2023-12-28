@@ -5,19 +5,22 @@ import Link from 'next/link'
 const SignIn = () => {
 	return (
 		<div className='container mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[400px]'>
-			<div className='flex flex-col space-y-2 text-center'>
-				<Icons.logo className='mx-auto h-6 w-6' />
+			<div className='flex flex-col space-y-2 items-center text-center'>
+				<Icons.logo
+					width={80}
+					height={80}
+				/>
 				<h1 className='text-2xl font-semibold tracking-tight'>
 					Welcome back
 				</h1>
 				<p className='text-sm max-w-xs mx-auto'>
-					By continuing, you are setting up a Platform account and
+					By continuing, you are setting up a OpenMinded account and
 					agree to our User Agreement and Privacy Policy.
 				</p>
 			</div>
 			<UserAuthForm />
 			<p className='px-8 text-center text-sm text-muted-foreground'>
-				New to Platform?{' '}
+				New to OpenMinded?{' '}
 				<Link
 					href='/sign-up'
 					className='hover:text-brand text-sm underline underline-offset-4'>

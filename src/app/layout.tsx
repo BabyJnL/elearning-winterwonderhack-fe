@@ -9,8 +9,8 @@ import '@/styles/globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-	title: 'Platform',
-	description: 'A Learning Platform.',
+	title: 'OpenMinded',
+	description: 'A Forum Learning Platform.',
 }
 
 export default function RootLayout({

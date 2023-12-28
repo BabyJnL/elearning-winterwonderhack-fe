@@ -27,8 +27,8 @@ export default async function Home() {
 					</div>
 					<dl className='divide-y divide-gray-100 p-5 pt-3 text-sm leading-5 space-y-3'>
 						<p>
-							Your personal Platform frontpage. Come here to check in
-							with your favorite communities.
+							Your personal OpenMinded frontpage. Come here to check
+							in with your favorite communities.
 						</p>
 
 						<Link
